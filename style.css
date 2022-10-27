@@ -1,0 +1,283 @@
+@font-face {
+    font-family: genotype;
+    src: url(/Fonts/GENOTYPE.TTF);
+}
+
+@font-face {
+    font-family: justabit;
+    src: url(/Fonts/justabit.ttf);
+}
+
+
+@keyframes slidingbg{
+    0% {
+        background-position: 0px 0px;
+    }
+    0% {
+        background-position: 512px 128px;
+    }
+}
+
+body {
+    background-image: url(/WhiteGrid.png);
+    animation: slidingbg 20s linear infinite;
+    margin: 40px;
+    font-family: justabit;
+    font-size: 32px;
+    cursor: url('crosscursorNormal.cur'), default;
+}
+
+h1 {
+    font-family: genotype;
+    text-align: center;
+    font-size: 40pt;
+    word-wrap: break-word;
+    line-height: 1.5em;
+}
+
+a {
+    color: aqua;
+    text-decoration: none;
+    text-shadow: 0 0 4px black;
+    cursor: url('crosscursorlinkstatic.cur'), default;
+}
+
+a:visited {
+    color: lightblue;
+}
+
+a:hover, a:visited:hover {
+    color: aquamarine;
+}
+
+#logo {
+    margin: auto;
+    /* max-height: 10vmin; */
+    max-width: fit-content;
+}
+
+#logo img {
+    height: 20vmin;
+}
+
+#headbuttonbar {
+    height: 6vmin;
+    width: fit-content;
+    border-style: solid;
+    border-width: 0 3vmin;
+    border-image-source: url(/HeaderImg/Topbar.png);
+    border-image-repeat: stretch;
+    border-image-slice: 25% fill;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* @supports (max-width: -moz-fit-content) {
+    #logo {
+        max-width: -moz-fit-content;
+    }
+    #headbuttonbar {
+        width: -moz-fit-content;
+    }
+} */
+
+#headbuttonbar a {
+    /* cursor: pointer; */
+    /* cursor: url('crosscursorlink.ani'), default; */
+    margin: 0px 4px;
+}
+
+#headbuttonbar a div {
+    height: 5vmin;
+    width: 15vmin;
+    /* background-color: aqua; */
+}
+
+#aboutbutton div {
+    background-image: url(/HeaderImg/ButtonAboutIdle.png);
+    background-size: cover;
+}
+#aboutbutton:hover div {
+    background-image: url(/HeaderImg/ButtonAboutHover.png);
+}
+#aboutbutton:focus div {
+    background-image: url(/HeaderImg/ButtonAboutClick.png);
+}
+
+#homebutton div {
+    background-image: url(/HeaderImg/ButtonHomeIdle.png);
+    background-size: cover;
+}
+#homebutton:hover div {
+    background-image: url(/HeaderImg/ButtonHomeHover.png);
+}
+#homebutton:focus div {
+    background-image: url(/HeaderImg/ButtonHomeClick.png);
+}
+
+#worksbutton div {
+    background-image: url(/HeaderImg/ButtonWorksIdle.png);
+    background-size: cover;
+}
+#worksbutton:hover div {
+    background-image: url(/HeaderImg/ButtonWorksHover.png);
+}
+#worksbutton:focus div {
+    background-image: url(/HeaderImg/ButtonWorksClick.png);
+}
+
+#blogbutton div {
+    background-image: url(/HeaderImg/ButtonBlogIdle.png);
+    background-size: cover;
+}
+#blogbutton:hover div {
+    background-image: url(/HeaderImg/ButtonBlogHover.png);
+}
+#blogbutton:focus div {
+    background-image: url(/HeaderImg/ButtonBlogClick.png);
+}
+
+#partitionedbody {
+    display: flex;
+    justify-content: center;
+    /* background-color: black; */
+    min-height: 100px;
+}
+
+.partition {
+    display: block;
+    min-height: 400px;
+    min-width: 240px;
+    /* border: 2px solid; */
+}
+
+.gamepart {
+    display: flex;
+    justify-content: center;
+    /* background-color: black; */
+    min-height: 25vmin;
+    margin-bottom: 3min;
+}
+
+.partition > div {
+    margin: 8px;
+    padding: 16px;
+    background-color: rgba(64, 64, 64, 0.7);
+    border-radius: 32px;
+    min-height: 100px;
+}
+
+.gamepart > .partition > div {
+    min-height: 25vmin;
+}
+
+.gameicon {
+    width: 25vmin;
+    height: 25vmin;
+}
+
+.partition > div > p {
+    color: white;
+    text-shadow: 0 0 4px black;
+}
+
+.partition > div b {
+    font-weight: normal;
+    color: cyan;
+}
+
+.partition > div > h1 {
+    background-color: white;
+    margin-top: 0;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 16px;
+    font-size: large;
+}
+
+#updatelist {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 16px;
+    overflow-y: scroll;
+    min-height: 300px;
+    max-height: 50vh;
+}
+
+#updatelist::-webkit-scrollbar {
+    margin-right: 8px;
+}
+
+#updatelist span {
+    /* This is for highlighting the dates! */
+    color: darkcyan;
+    text-shadow: 0 0 3px cyan;
+}
+
+#updatelist ul {
+    list-style-type: none;
+    padding-left: 8px;
+}
+
+#updatelist li {
+    margin-bottom: 10px;
+}
+
+.imagelist, .textlist, .gamelink {
+    text-align: center;
+}
+
+.textlist a {
+    font-family: genotype;
+    font-size: 24px;
+    line-height: 1.5em;
+}
+
+.gamelink a {
+    font-family: genotype;
+    font-size: 48px;
+    line-height: 1.5em;
+}
+
+#footer {
+    margin: 8px;
+    padding: 16px;
+    background-color: rgba(64, 64, 64, 0.7);
+    margin: 100px 20%;
+    border-radius:16px;
+    color: white;
+    text-shadow: 0 0 4px white;
+    text-align: center;
+}
+
+.imagerow {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-top: 8px;
+    border-width: 2px 0 0 0;
+    border-style: solid;
+    border-color: white;
+}
+
+.imagerow img {
+    height: 31px;
+}
+
+.construction {
+    border-image: url(/ConstructionBorder.png);
+    border-image-slice: 8%;
+    border-image-repeat: round;
+    border-style: solid;
+    border-color: black;
+    border-width: 16px;
+}
+
+.warning {
+    color: orange;
+    text-shadow: 0 0 4px darkgoldenrod;
+}
